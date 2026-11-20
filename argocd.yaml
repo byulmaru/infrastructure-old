@@ -8,11 +8,15 @@ spec:
   sources:
     - repoURL: https://argoproj.github.io/argo-helm
       chart: argo-cd
-      targetRevision: 9.1.8
+      targetRevision: 10.18.2
       helm:
         valueFiles:
           - $values/argocd/values.yaml
-    - repoURL: https://github.com/byulmaru/infrastructure.git
+        valuesObject:
+          global:
+            networkPolicy:
+              create: false
+    - repoURL: https://github.com/byulmaru/infrastructure-old.git
       targetRevision: HEAD
       ref: values
       path: argocd
@@ -25,3 +29,4 @@ spec:
       enabled: true
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
