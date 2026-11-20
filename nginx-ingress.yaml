@@ -8,11 +8,11 @@ spec:
   sources:
     - repoURL: oci://ghcr.io/nginx/charts/nginx-ingress
       chart: nginx-ingress
-      targetRevision: 2.4.1
+      targetRevision: 2.9.0
       helm:
         valueFiles:
           - $values/nginx-ingress/values.yaml
-    - repoURL: https://github.com/byulmaru/infrastructure.git
+    - repoURL: https://github.com/byulmaru/infrastructure-old.git
       targetRevision: HEAD
       ref: values
       path: nginx-ingress
