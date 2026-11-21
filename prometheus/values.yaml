@@ -9,33 +9,7 @@ alertmanager:
             requests:
               storage: 10Gi
 grafana:
-  ingress:
-    enabled: true
-    ingressClassName: tailscale
-    tls:
-      - hosts:
-          - grafana
-  affinity:
-    nodeAffinity:
-      preferredDuringSchedulingIgnoredDuringExecution:
-        - weight: 1
-          preference:
-            matchExpressions:
-              - key: oci.oraclecloud.com/oke-is-preemptible
-                operator: Exists
-                values: []
-  tolerations:
-    - key: "oci.oraclecloud.com/oke-is-preemptible"
-      operator: "Equal"
-      value: "present"
-      effect: "NoSchedule"
-  persistence:
-    enabled: true
-    size: 10Gi
-    storageClassName: oci-fs
-    accessModes: ["ReadWriteMany"]
-  initChownData:
-    enabled: false
+  enabled: false
 prometheus:
   prometheusSpec:
     retentionSize: "50GB"
