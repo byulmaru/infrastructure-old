@@ -12,7 +12,7 @@ spec:
       helm:
         valueFiles:
           - $values/prometheus/values.yaml
-    - repoURL: https://github.com/byulmaru/infrastructure.git
+    - repoURL: https://github.com/byulmaru/infrastructure-old.git
       targetRevision: HEAD
       ref: values
       path: prometheus

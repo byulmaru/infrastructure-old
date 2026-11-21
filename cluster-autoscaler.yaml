@@ -6,7 +6,7 @@ metadata:
 spec:
   project: infrastructure
   sources:
-    - repoURL: https://github.com/byulmaru/infrastructure.git
+    - repoURL: https://github.com/byulmaru/infrastructure-old.git
       targetRevision: HEAD
       path: cluster-autoscaler
 
