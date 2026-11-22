@@ -9,13 +9,6 @@ spec:
     - repoURL: https://kubernetes-sigs.github.io/descheduler/
       chart: descheduler
       targetRevision: 0.34.0
-      helm:
-        valueFiles:
-          - $values/descheduler/values.yaml
-    - repoURL: https://github.com/byulmaru/infrastructure-old.git
-      targetRevision: HEAD
-      path: descheduler
-      ref: values
 
   destination:
     server: https://kubernetes.default.svc
