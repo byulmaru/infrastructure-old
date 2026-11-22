@@ -35,6 +35,3 @@ spec:
       kind: Deployment
       jsonPointers:
         - /spec/template/metadata/annotations/checksum~1secret
-    - group: ""
-      kind: Secret
-      name: prometheus-grafana
